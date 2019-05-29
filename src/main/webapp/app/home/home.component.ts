@@ -78,4 +78,8 @@ export class HomeComponent implements OnInit {
     clearAllCourses() {
         this.courses = [];
     }
+
+    clearAllCoursesWithTN() {
+        this.coursesWithTN = [];
+    }
 }
