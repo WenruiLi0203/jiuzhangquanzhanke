@@ -34,6 +34,7 @@
                     <div>{{course.courseLocation}}</div>
                     <div>{{course.courseContent}}</div>
                     <div>{{course.teacherId}}</div>
+                    <button (click)="deleteClass(course.courseName)">删除</button>
                  </div>
             </div>
         </div>
@@ -53,13 +54,50 @@
             </div>
         </div>
 
-        <!--<div *ngIf="isAuthenticated()">-->
-            <!--<hr>-->
-            <!--<span>注册功能</span>-->
-            <!--<hr>-->
-            <!--<div><input [ngModel]= "classeNameNeedToReg" ]></div>-->
-            <!--<div><span><button (click)="getAllCoursesWithTN()">注册课程</button> </span></div>-->
-        <!--</div>-->
+        <hr>
+        <span>添加课程</span>
+        <hr>
+        <div>
+            <span>
+                <input type="text" placeholder="Class Name" [(ngModel)]="classNeedToReg.courseName">
+                <input type="text" placeholder="Class Contents" [(ngModel)]="classNeedToReg.courseContent">
+                <input type="text" placeholder="Class Location" [(ngModel)]="classNeedToReg.courseLocation">
+                <input type="text" placeholder="Professor" [(ngModel)]="classNeedToReg.courseTeacher">
+                <button (click)="registerNewClass()">添加</button>
+            </span>
+        </div>
+        <p>{{classNeedToReg.courseName}}</p>
+        <p>{{classNeedToReg.courseContent}}</p>
+        <p>{{classNeedToReg.courseLocation}}</p>
+        <p>{{classNeedToReg.courseTeacher}}</p>
+
+        <hr>
+        <span>删除课程</span>
+        <hr>
+        <div>
+            <span>
+                <input type="text" placeholder="Class Name" [(ngModel)]="classNameNeedToDel">
+                <button (click)="deleteClass()">删除</button>
+            </span>
+        </div>
+        <p>{{classNameNeedToDel}}</p>
+
+        <hr>
+        <span>修改课程</span>
+        <hr>
+        <div>
+            <span>
+                <input type="text" placeholder="Class Name" [(ngModel)]="classNeedToMod.courseName">
+                <input type="text" placeholder="Class Contents" [(ngModel)]="classNeedToMod.courseContent">
+                <input type="text" placeholder="Class Location" [(ngModel)]="classNeedToMod.courseLocation">
+                <input type="text" placeholder="Professor" [(ngModel)]="classNeedToMod.courseTeacher">
+                <button (click)="modifyClass()">修改</button>
+            </span>
+        </div>
+        <p>{{classNeedToMod.courseName}}</p>
+        <p>{{classNeedToMod.courseContent}}</p>
+        <p>{{classNeedToMod.courseLocation}}</p>
+        <p>{{classNeedToMod.courseTeacher}}</p>
 
     </div>
 </div>

@@ -1,6 +1,10 @@
 package com.mycompany.myapp.domain.dto;
 
 import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
